@@ -1,0 +1,7 @@
+<p style="color: green"><%= notice %></p>
+<%= render @restaurant %>
+<div>
+  <%= link_to "Modifier ce restaurant", edit_restaurant_path(@restaurant) %>
+  <%= link_to "Retour aux restaurants", restaurants_path %>
+  <%= button_to "Supprimer ce restaurant", @restaurant, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+</div>

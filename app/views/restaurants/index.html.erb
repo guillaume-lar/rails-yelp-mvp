@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<div id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <h3><%= restaurant.name %></h3>
+    <p><strong>Address:</strong> <%= restaurant.address %></p>
+    <p><strong>Category:</strong> <%= restaurant.category %></p>
+
+    <%= button_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <!-- You can add a line break or a horizontal rule between restaurants for better separation -->
+    <hr>
+  <% end %>
+</div>
+
+
+
+<%= link_to "New restaurant", new_restaurant_path %>
